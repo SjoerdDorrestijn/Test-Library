@@ -1,0 +1,13 @@
+Bytes = byte*;
+Procedure = void(Bytes);
+
+void ReadArrayAndDo(Bytes* ArrayGiven, Procedure ProcedureGiven)
+{
+  int i = sizeof(ArrayGiven);
+  int a = 0;
+  do {
+    ProcedureGiven(ArrayGiven[a]);
+    a++;
+    i--;
+  } while (i > 0);
+}
